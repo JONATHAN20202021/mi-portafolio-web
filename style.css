@@ -1,0 +1,33 @@
+nav a {
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+}
+nav :hover{
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+}
+body {
+    background-image: url(https://image.freepik.com/vector-gratis/fondo-tecnologia-blanca_23-2148403820.jpg)
+}
+h1 {
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+header{
+padding-left: 110px;}
+#sobre-mi img {
+    float: right;
+    margin-left: 10px;
+    
+}
+
+#sobre-mi p {
+    float: left;
+    width: calc(100% - 150px);
+}
+h2 {
+    color:  #ff0000;
+}

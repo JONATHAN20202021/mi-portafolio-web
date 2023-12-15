@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-image: url(https://image.freepik.com/vector-gratis/fondo-tecnologia-blanca_23-2148403820.jpg)">
-    <header style="
-        padding-left: 110px;">
+<body>
+    <header>
         <h1>¡Bienvenidos A Mi Mundo Tecnológico!</h1>
     </header>
     <nav>
@@ -19,13 +19,13 @@
         <a href="#habilidades">Habilidades</a>
         <a href="#contacto">Contacto</a>
     </nav>
+    <br><br>
     <main>
         <section id="sobre-mi">
             <h2>Sobre Mí:</h2>
             <img src="https://scontent.fuio21-1.fna.fbcdn.net/v/t1.15752-9/406387366_357612703623217_7576089346060277608_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=LDiBq0BViOgAX9mdxsm&_nc_ht=scontent.fuio21-1.fna&oh=03_AdSDo3FJAcDjP9UFW-n8cI7BIDIdlfkDLhF6IoxNXFGmGQ&oe=65A0303A"
-            alt="Soy yo" width="135" style="float: right; margin-left: 10px;">
-            <p style="float: left; width: calc(100% - 150px);">
-                ¡Hola, soy Jonathan Huertas!¡La tecnología es mi pasión! Desde joven me cautivaron los avances digitales
+                alt="Soy yo" width="135">
+            <p>Hola, soy Jonathan Huertas!¡La tecnología es mi pasión! Desde joven me cautivaron los avances digitales
                 y su capacidad para transformar la manera en que interactuamos con el mundo.
                 <br>Mi fascinación por la programación y la resolución de problemas me llevó a sumergirme en la
                 Ingeniería en
@@ -75,11 +75,24 @@
         </section>
         <section id="contacto">
             <h2>Contáctame:</h2>
-            <ul>
-                <li><strong>Correo:</strong>Bscmaldito@gmail.com</li>
-                <li><strong>Celular:</strong>0997018034</li>
-                <li><strong>Teléfono:</strong>(06)2988840</li>
-            </ul>
+            <form>
+                <form action="https://httpbin.org/post" method="POST">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu Nombre" required><br><br>
+
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido" placeholder="Escribe tu Apellido" required><br><br>
+
+                    <label for="correo">Correo:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="Escribe tu Correo"><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe un Mensaje"
+                        required></textarea><br><br>
+
+                    <input type="submit">
+                </form>
+
         </section>
     </main>
     <footer>
