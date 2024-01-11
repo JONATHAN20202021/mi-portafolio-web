@@ -1,33 +1,393 @@
-nav a {
-    float: right;
-    margin-right: 20px;
-    font-size: 20px;
-}
-nav :hover{
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
-}
+/* Estilos para todo el cuerpo y fuentes */
 body {
-    background-image: url(https://image.freepik.com/vector-gratis/fondo-tecnologia-blanca_23-2148403820.jpg)
+    font-family: Lato, sans-serif;
+    padding: 4px;
+    box-sizing: border-box;
+    background: url(https://tuderechoasaber.com.do/wp-content/uploads/2020/02/Tecnolog%C3%ADa.gif);
+    color: #000000;
+    display:block;
+    text-align: start;
+    line-height: 1.5;
+    
 }
-h1 {
-    display:flex;
+.contenido p {
+    margin: 15px;
+}
+.contenido ul{
+    margin: 15px;
+}
+/* Estilos para la barra de navegación */
+nav {
+    background:url(https://images.unsplash.com/Ys-DBJeX0nE.JPG?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9uZG8lMjBkZSUyMHBhbnRhbGxhJTIwZGUlMjB0ZWNub2xvZyVDMyVBRGF8ZW58MHx8MHx8fDA%3D);
+    padding: 5px;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
-    align-items:center
+    box-shadow: -2px -2px 15px #2ba8fb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-right: 10px;
+    margin-left: 20px;
 }
-header{
-padding-left: 110px;}
-#sobre-mi img {
-    float: right;
-    margin-left: 10px;
+
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;  
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 4px 0 #ffffff91;
+    margin-right: 1px;
+}
+nav a:hover {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease-in-out;
+    text-decoration: underline;
+    background:lightblue ;
+    color: #000;
+    
+}
+/*Estilos para el menu hamburguesa */
+.menu-toggle {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+    margin: 1px 10px; 
+    
+}
+.menu-items {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+}
+.menu-items a {
+    color: #ffff;
+    text-decoration: none;
+    border: 1px solid #007bff; 
+    padding: 5px 8px; 
+    border-radius: 15px;
+    font-size: 14px; 
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (min-width:496px) {
+.menu-toggle {
+    display: none; 
+    transition: transform 0.3s ease;
+    }
+  }
+@media screen and (max-width: 495px) {
+.menu-toggle {
+    display: block; 
+    width: 17%;
+    transition: transform 0.3s ease;
+    }
+
+.menu-items {
+    display: none; 
+    width: 100%; 
+    transition: transform 0.3s ease;
+    }
+
+.menu-items.active {
+    display: flex; 
+    flex-direction: column; 
+    align-items:normal; 
+    transition: transform 0.3s ease;
+    }
+
+.menu-items.active a {
+    transition: transform 0.3s ease;
+    font-size: 12px; 
+     
+   }
+}
+
+/* Estilos para el contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+/* Estilos para las secciones */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffffe3;
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(255, 2, 2, 0.547);
+    width: 80%;
+    max-width: 800px;
+    border: 1px solid #007bff;
+}
+
+section h2 {
+    color: #951111d8;
+    text-align: center;
+}
+
+section h3 {
+    color: #000ac0d0;
+    
+}
+/* Estilos para las imágenes dentro de las secciones */
+section img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8%;
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    width: 24%;
+    border: 8px groove;
+}
+
+section .galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section .galeria figure {
+    margin: 10px;
+    text-align: center;
+    max-width: 200px;
+    width: 30%;
+    position: relative;
+}
+
+section .galeria img {
+    border: 10%;
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    width: 104px;
+    max-width: 100%;
+    height: auto; 
+    transition: transform 0.3s ease-in-out;
+    border: 8px double;
+}
+
+section .galeria figcaption {
+    margin-top: 5px;
+    font-style: italic;
+    color: #888;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 460px) {
+    section .galeria figure {
+        width: 100%;
+        height: auto;
+    }
+
+    section .galeria img {
+        width: 70%;
+        max-width: 70%;
+    }
+
+    section .galeria figcaption {
+        position: static;
+        width: auto;
+        padding: 0;
+        background: none;
+        margin-top: 5px;
+    }
+}
+
+section .galeria img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1); 
+}
+
+/*Estilos para las reseñas */
+.comentarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    max-width: 100%; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  
+  .comentario {
+    border: 11px inset #ebf7ffcb;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+    width: 100%;
+    word-wrap: break-word;
+    max-width: calc(100% - 40px); 
+    width: 100%;
+    
+  }
+.quote {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 313px) {
+    .comentarios {
+      display: block; 
+      overflow-x: auto;
+    }
+  }
+/* Estilos para las listas de habilidades*/
+section ul {
+    list-style: none;
+    padding: 0;
+}
+.con{
+    overflow: auto;
+}
+.tec-icon{
+    float: left; 
+    margin-right: 10px; 
+    border-radius: 10%;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    width: 24px; 
+    height: auto;
+    margin-bottom: 3px;
+    max-width: 100%;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    max-width: 100%;
+    width: 90%; 
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
+    transition: transform 0.3s ease;
+}
+
+form label,form input,form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input,form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+form input,form textarea:focus {
+    color: rgb(13, 17, 17);
+    background-color: #ffffff;
+    outline-color: rgb(0, 0, 0);
+    box-shadow: -2px -2px 15px #2ba8fb;
     
 }
 
-#sobre-mi p {
-    float: left;
-    width: calc(100% - 150px);
+form input[type="submit"] {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
-h2 {
-    color:  #ff0000;
+      
+form input[type="submit"]:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+     
+form input[type="submit"]:active {
+    background-color: #000000;
+    transition: all 0.5s;
+    -webkit-transition: all 0.1s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2ba8fb;
+    box-shadow: 0 0 40px rgba(255, 2, 2, 0.547);
+    
+}
+
+footer p {
+    margin: 0;
+    color: #e3fdfffd;
+}
+footer a{
+    color: #0b0505;
+    margin-bottom: 6px;
+    
+}
+/* Estilos para la sección de inicio tipo "hero" */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDBpa2hxN3JrODEyMmdwODlwYTVtMDUxaWoyaWY4NW9panVsOGY4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l5JbspfwZ0yjHjlJ0K/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px;
+}
+
+@media screen and (max-width: 295px) {
+    .hero {
+        padding: 5% 10px; 
+    }
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #0056b3;
+    background-color: #6fc5ff;
+    transform: scale(1.3);
+    box-shadow: 0 0 100px 3px rgba(0, 153, 255, 0.75);
+}
+
+.hero a:active {
+    background-color: #000000;
+    transition: all 0.1s;
+    -webkit-transition: all 0.5s;
+    box-shadow: none;
+    transform: scale(0.98);
 }
